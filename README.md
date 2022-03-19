@@ -6,39 +6,46 @@ Tic Tac Toe numbers game (2 players) one enters odd numbers and the second one e
 Code Explanation:
 welcome the user 
 
-made a two dimensional array with the structure of the board and its shape
+made a list with the structure of the board and its shape
 
-declared the basic variables
-game_running always true until the game is finished.
-Sum variable which will let us know if it’s a draw or not.
-Position variable./
-Input (number input) variable.
-Printboard(board):
+declared the basic variables 
+	first player.
+	list of numbers available for the first player.
+	list of numbers available for the second player.
+	game_running always true until the game is finished.
+
+
+print board(board)
 made a function that can print the board in well-mannered shape as tic tac toe game in real life.
 	print it in each loop (after each play).
-Playerinput():
-A function that takes the input from the player check if it’s available for the player or not.
-Position():
-A function that takes the position of the input of the player and checks if it is available or not and fits it into the two dimensional array.
 
+player input()
+made a function that takes the input from the user and check if the number is in the (list of numbers available for the player) and if it's not, prints error message and let this player to try again.
+it also takes the position that the player wants to put his number into and check if this position or empty or not or if it even exists, if it's not empty or it does not exist it prints error message and let this player to try again.
 
 next stage I checked all the win situation after every play.
 
 check horizontal(board)
 	a function that checks all the three rows if any of them sums up to 15.
-
-
 check vertical(board) 
 a function that checks all the three columns if any of them sums up to 15.
 check diagonals(board)
 	a function that checks the two diagonals if any of them sums up to 15.
-Switchplayer():
-	A function that changes the player after every play.
-Main():
-	The main function:
-	Game loop:
+
+win or not()
+a function that checks if the winning situation was found to end the game or to complete.
+it also congratulates the winner if the winning situation was found and change game_running to False to end the game .
+
+check tie()
+a function that checks if the board is full and no one won to tell the player that it's a draw.
+	then it changes game_running to False to end the game.
+
+switch the player()
+	function that changes the current player after every play.
+
+GAME LOOP
 while game_running (Which means that if game_running = true the game will continue, if it's not the game will stop):
-here I used all the recent functions in this loop to continue the game process until there is a winner or it's a Draw situation.
+here i used all the recent functions in this loop to continue the game process until there is a winner or it's a Draw situation.
 
 YT video:
-https://www.youtube.com/watch?v=mn_dpwiFpkY (Arabic video)
+https://www.youtube.com/watch?v=VYVJ2_6Jnkc (Arabic Explanation Video)
